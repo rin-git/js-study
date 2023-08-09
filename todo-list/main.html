@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
+    <link rel="stylesheet" href="./main.css"/> 
+                <!--style태그로 헤드에 직접 작성해도 되지만 link를 이용해서 
+                css파일을 불러오는 형식도 된다 현재 main.html과 같은 경로에 있기때문에 
+                ./ 만약 폴더하나 밖에 있다면 .. 으로 위로 올라가면 된다-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet"/>
 </head>
 <body>
     <h1>투두리스트</h1>
@@ -12,14 +19,14 @@
     <h6>투두리스트</h6>
     <br/>
     <div>영역</div>
-    <div>영역2</div>
+    
     <p>긴 문장을 쓸때 (문장이라는 영역을 부여하기 위함)</p>
-    <p>긴 <span style="color: red;">문장</span>을 쓸때 (문장이라는 영역을 부여하기 위함)</p>
+    <p >긴 <span style="color: red;">문장</span>을 쓸때 (문장이라는 영역을 부여하기 위함)</p>
     <br/>
     <p>br태그는 엔터 역할</p>
     <hr/>
     <p>hr은 엔터줄긋기</p>
-    <span style="color: green;">스팬태그는 다른 스타일에 영향을 안주고 바꾸고 싶은 부분만 영향을 줌</span>
+    <p id ="titleId">스팬태그는 다른 스타일에 영향을 안주고<span style="color: green; font-style:italic;" > 바꾸고 싶은 부분만 영향을 줌 </span></p>
     <ul>
         <li>1</li>
         <li>2</li>
@@ -28,5 +35,17 @@
     <input type="number"/>   
     <button>버튼</button>
     <img src="https://mml.pstatic.net/www/mobile/edit/20230807_1095/upload_1691375959721qihCs.gif">
+
+    <hr/>
+    <p>여기부턴 css 스터디</p>
+    <p style="color: red;">태그작성은 세가지 방법이 있음 첫번째로 태그에 바로 작성</p>
+    <p class = "title title1 title2" >두번째 class 사용 head 부분에 .으로 불러 사용 class는 띄어쓰기를 통해서 여러이름을 가질 수 있음   </p>    <!--   .title   -->
+    <p id = "titleId">세번째는 head부분에 #으로 불러서 사용  id는 class처럼 여러개 부여할 수 없고 하나만 됨 </p>        <!--   #titleId   -->
+    <p>p태그 안의 <span>span 부분만 크게</span></p> <!--   p > span   -->
+    <p><span class="tltle2"> p태그 안에 class가 </span>title2인것만 글자색을 바꿈</p>   <!--   p > .tltle2   -->
+
+    <div class = "layout">
+        <p class="layout1"> 글자</p>
+    </div>
 </body>
 </html>

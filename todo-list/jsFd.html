@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./bootstrap.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <h3 id="title">정말 간단한 To-Do List</h3>
+        <div id="sub-con">
+            <ul class="list-group" id="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center" id="list-group-item">
+                    할일 목록1
+                    <span class="badge bg-primary rounded-pill">삭제</span>
+                </li>
+            </ul>
+        </div>
+        <div class="input-group mb-3" id="input-group">
+            <input type="text" class="form-control" id="input-area">
+            <button class="btn btn-outline-secondary" type="button" id="button-area" onclick="x()">Button</button>
+        </div>
+    </div>
+    <script>
+        // console.log("test");
+        let a = 1;
+        let b = 2;
+        // console.log(`숫자찍기 ${a}`);
+        // console.log(`숫자찍기 ${a+a}`);
+        a = 23;
+
+        let arr = [1, 2, '문자', true];
+        // console.log(arr);
+        arr.push('push');
+        // console.log(arr);
+
+        let obj = { "key": "value", "key2": "value2" };
+        // console.log(obj);
+
+        let dic = [
+            { "a": "apple" },
+            { "b": "banana" },
+            { "c": "cloud" }
+        ]
+
+
+
+        for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+            // console.log(element);    
+        }
+
+        let str = "대한민국-만세";
+        let str2 = str.split("-");  // "-" 있는부분 나누기
+        console.log("test");
+        console.log(str2);
+
+        let str3 = str2.join("!!"); // 배열을 !!를 붙여 합치기
+        console.log(str3);
+
+        console.log(str.indexOf("한"));     //있으면 인덱스 반환 없으면 -1
+
+        function x() {
+            let todo = document.getElementById("input-area").value;
+            // alert(todo);
+
+            let todoJQuery = $("#input-area").val();
+            alert(todoJQuery);
+        }
+    </script>
+</body>
+
+</html>

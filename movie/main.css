@@ -1,0 +1,17 @@
+* {
+
+    font-family: 'Orbit', sans-serif;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.471);
+}
+#jumbotron {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#review-btn{
+    width: 100%;
+    
+}
